@@ -4,6 +4,7 @@ import ButtonComponent from "../../components/ButtonComponent";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import React, { useState } from "react";
+// import {Modal, Box} from '@mui/material';
 
 let nextId = 0;
 
@@ -30,6 +31,19 @@ export const TextField = styled.textarea`
   }
 `;
 
+// const style = {
+//     position: "absolute",
+//     top: "50%",
+//     left: "50%",
+//     transform: "translate(-50%, -50%)",
+//     width: "min(600px, 90%)",
+//     bgcolor: "#0B0725",
+//     border: "2px solid #000",
+//     boxSizing: "border-box",
+//     boxShadow: 15,
+//     p: 5,
+//   };
+
 function refreshPage() {
     window.location.reload(false);
 }
@@ -42,6 +56,12 @@ function Selection() {
     const [name, setName] = useState('');
     const [choices, setChoices] = useState([]);
     const navigate = useNavigate();
+    // const [open, setOpen] = React.useState(false);
+    // const handleOpen = () => setOpen(true);
+    // const handleClose = () => setOpen(false);
+    
+
+
 
     return (
         <>

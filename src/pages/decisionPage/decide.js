@@ -8,6 +8,7 @@ function decide() {
             <div className="dTop">
                 <Link to ="/"><img src={logo} alt="EyeChoose" style={{ width: 275, height: 175, margin: 0, padding: 0 }} /></Link>
                 <br />
+                
             </div>
         </>
     );
