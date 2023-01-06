@@ -1,7 +1,7 @@
 import logo from "../../logo.png"
 import './selection.css';
 import ButtonComponent from "../../components/ButtonComponent";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import React, { useState } from "react";
 
@@ -32,13 +32,16 @@ export const TextField = styled.textarea`
 
 function refreshPage() {
     window.location.reload(false);
-  }
+}
+
+
 
 
 function Selection() {
 
     const [name, setName] = useState('');
     const [choices, setChoices] = useState([]);
+    const navigate = useNavigate();
 
     return (
         <>
@@ -51,24 +54,23 @@ function Selection() {
                     <div className="selectionTextfield"><TextField value={name} onChange={e => setName(e.target.value)} rows="1" maxLength="30" placeholder="Type Here..." style={{ overflow: "hidden" }}></TextField></div>
                     <br />
                     <div className="buttonArea">
-                    <button onClick={() => {
-                        if (nextId === 10)
-                        {
-                            alert("Limit reached");
-                        }
-                        else if (name === "") {
-                            alert("Please enter in a choice");
-                        }
-                        else {
-                            setName('');
-                            setChoices([
-                                ...choices,
-                                { id: nextId++, name: name }
-                            ]);
-                            
-                        }
-                    }} className="addButton"><span>Add</span></button>
-                    <button className="addButton" onClick={refreshPage}>Clear</button>
+                        <button onClick={() => {
+                            if (nextId === 10) {
+                                alert("Limit reached");
+                            }
+                            else if (name === "") {
+                                alert("Please enter in a choice");
+                            }
+                            else {
+                                setName('');
+                                setChoices([
+                                    ...choices,
+                                    { id: nextId++, name: name }
+                                ]);
+
+                            }
+                        }} className="addButton"><span>Add</span></button>
+                        <button className="addButton" onClick={refreshPage}>Clear</button>
                     </div>
                 </div>
                 <p className="choiceArea">Choices:  {nextId}   {/*{choices.map(choices => (
@@ -77,7 +79,21 @@ function Selection() {
             </div>
             <br /><br /><br />
             <div className="selectionBottom">
-                <Link to = "/rules" state={nextId}><ButtonComponent>Submit</ButtonComponent></Link>
+                {/* <Link to = "/rules" state={nextId}><ButtonComponent>Submit</ButtonComponent></Link> */}
+                <ButtonComponent onClick={() => {
+                    if (nextId === 0) {
+                        alert("There are no choices to choose from");
+                    }
+                    else if(nextId === 1)
+                    {
+                        alert("There is only one choice inputted. Did you make a mistake or can you seriosuly not make a decision on one choice?")
+                    }
+                    else 
+                    {
+                        // window.location = '/rules';
+                        navigate('/decide');
+                    }
+                }}>Submit</ButtonComponent>
             </div>
         </>
     );
