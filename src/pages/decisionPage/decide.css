@@ -6,3 +6,48 @@
   body{
   background-color: #ED2647;
   }
+
+  .dMiddle
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 30vh;
+    }
+
+  .choosingText
+  {
+    color: white;
+    font-size: 6vw;
+    font-family: American Typewriter, serif	
+  }
+
+  .textArea{
+    overflow: hidden;
+    border-right: .05em solid #ED2647;
+    white-space: nowrap;
+    animation: 
+      typing 1.25s forwards;
+    font-size: 1.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from { width: 0; color: white; }
+    to { width: 100%; color: white;}
+
+  }
+
+.containerText
+{
+  display: inline-block;
+}
+
+.buttonsArea
+{
+  display: flex;
+  flex-direction: row;
+  gap: 3.5vw;
+}
+
