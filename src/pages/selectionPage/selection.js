@@ -4,7 +4,7 @@ import ButtonComponent from "../../components/ButtonComponent";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import React, { useState } from "react";
-// import {Modal, Box} from '@mui/material';
+// import { Modal, Box } from '@mui/material';
 
 let nextId = 0;
 
@@ -42,13 +42,16 @@ export const TextField = styled.textarea`
 //     boxSizing: "border-box",
 //     boxShadow: 15,
 //     p: 5,
-//   };
+// };
 
 function refreshPage() {
     window.location.reload(false);
 }
 
-
+function restartID()
+{
+    nextId = 0;
+}
 
 
 function Selection() {
@@ -59,14 +62,13 @@ function Selection() {
     // const [open, setOpen] = React.useState(false);
     // const handleOpen = () => setOpen(true);
     // const handleClose = () => setOpen(false);
-    
 
 
 
     return (
         <>
             <div className="topSelection">
-                <Link to="/"><img src={logo} alt="EyeChoose" style={{ width: 275, height: 175 }} /></Link>
+                <Link to="/"><img onClick = {restartID} src={logo} alt="EyeChoose" style={{ width: 275, height: 175 }} /></Link>
             </div>
             <div className="selectionArea">
                 <p className="selectionText">Enter your choices one at a time below so I can choose what you should do (30 character limit)</p>
@@ -91,6 +93,7 @@ function Selection() {
                             }
                         }} className="addButton"><span>Add</span></button>
                         <button className="addButton" onClick={refreshPage}>Clear</button>
+                        {/* {console.log(choices[nextId - 1])} */}
                     </div>
                 </div>
                 <p className="choiceArea">Choices:  {nextId}   {/*{choices.map(choices => (
@@ -104,14 +107,15 @@ function Selection() {
                     if (nextId === 0) {
                         alert("There are no choices to choose from");
                     }
-                    else if(nextId === 1)
-                    {
+                    else if (nextId === 1) {
                         alert("There is only one choice inputted. Did you make a mistake or can you seriosuly not make a decision on one choice?")
                     }
-                    else 
-                    {
+                    else {
                         // window.location = '/rules';
+                        sessionStorage.setItem("theArray", JSON.stringify(choices))
+                        // console.log(JSON.stringify(choices))
                         navigate('/decide');
+                        refreshPage()
                     }
                 }}>Submit</ButtonComponent>
             </div>
