@@ -1,10 +1,12 @@
 import logo from "../../logo.png"
 import './decide.css';
 import { Link } from "react-router-dom";
-import ButtonComponent from "../../components/ButtonComponent";
+// import ButtonComponent from "../../components/ButtonComponent";
 
 
 ///Add Page Not Found 
+
+//Repsonsiveness of this page
 
 
 function decide() {
@@ -31,11 +33,14 @@ function decide() {
             </div>
             <div className="dMiddle">
                 <div className="containerText">
-                <div className="textArea"><p className="choosingText">I choose {choiceName.name}</p></div>
+                    <div className="textArea"><p className="choosingText">I choose {choiceName.name}</p></div>
                 </div>
+                <div className="tbSpace"></div>
                 <div className="buttonsArea">
-                    <ButtonComponent onClick={chooseChoice}>Choose Again</ButtonComponent>
-                    <Link to = "/selection"><ButtonComponent>Add New Choices</ButtonComponent></Link>
+                    <button className="decideButton" onClick={chooseChoice}>Choose Again
+                        </button>
+                    <Link to="/selection"><button className="decideButton" >New Choices
+                        </button></Link>
                 </div>
             </div>
         </>

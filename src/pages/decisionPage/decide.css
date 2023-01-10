@@ -1,53 +1,186 @@
 .dTop {
-    text-align: center;
-    
+  text-align: center;
+
+}
+
+body {
+  background-color: #ED2647;
+}
+
+.decideButton {
+  border-radius: 100px;
+  border: 1px solid black;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: black;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 25px;
+  /* font-weight: bolder; */
+  text-decoration: none;
+  /* background:linear-gradient(160deg, #666, #444); */
+  background-color: #ED2647;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  /* transition: 0.25s ease,; */
+  height: 75px;
+  width: 275px;
+
+}
+
+.decideButton:active {
+  border: 3px outset black;
+  color: white;
+  background: linear-gradient(160deg, #ED2647, #ED2647);
+  text-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  /* transition-delay: 1s; */
+}
+
+/* .decideButton span {
+    position: absolute;
+    display: block;
   }
   
-  body{
-  background-color: #ED2647;
+  .decideButton span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #eee);
   }
-
-  .dMiddle
-  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 30vh;
-    }
-
-  .choosingText
-  {
-    color: white;
-    font-size: 6vw;
-    font-family: American Typewriter, serif	
+  .decideButton:active span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
   }
+  .decideButton span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #eee);
+  }
+  .decideButton:active span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+  .decideButton span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #eee);
+  }
+  .decideButton:active span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  
+  .decideButton span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #eee);
+  }
+  .decideButton:active span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  } */
 
-  .textArea{
-    overflow: hidden;
-    border-right: .05em solid #ED2647;
-    white-space: nowrap;
-    animation: 
-      typing 1.25s forwards;
-    font-size: 1.6rem;
+.dMiddle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 30vh;
+}
+
+.choosingText {
+  color: white;
+  font-size: 7vw;
+  font-family: American Typewriter, serif
+}
+
+.textArea {
+  overflow: hidden;
+  border-right: .05em solid #ED2647;
+  white-space: nowrap;
+  animation:
+    typing 1.25s forwards;
+  font-size: 1.6rem;
+  width: 0;
+}
+
+@keyframes typing {
+  from {
     width: 0;
-  }
-  @keyframes typing {
-    from { width: 0; color: white; }
-    to { width: 100%; color: white;}
-
+    color: white;
   }
 
-.containerText
-{
+  to {
+    width: 100%;
+    color: white;
+  }
+
+}
+
+.containerText {
   display: inline-block;
 }
 
-.buttonsArea
-{
+.buttonsArea {
   display: flex;
   flex-direction: row;
   gap: 3.5vw;
 }
 
+
+/* @media screen and (max-width: 1000px) {
+
+  .decideButton {
+    height: 6vw;
+    width: 25vw;
+    font-size: 2vw;
+  }
+} */
+
+@media screen and (max-width: 700px) {
+  .decideButton {
+    height: 50px;
+    width: 175px;
+    font-size: 13.5px;
+  }
+
+  .buttonsArea {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .dMiddle {
+    min-height: 40vh;
+  }
+
+  .choosingText
+  {
+    font-size: 9vw;
+  }
+
+  .tbSpace
+  {
+    height: 30px;
+  }
+
+}
+
+/* @media screen and (max-width: 625px) {
+  .choosingText {
+    font-size: 8vw;
+  }
+
+} */
