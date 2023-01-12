@@ -103,7 +103,7 @@ body {
 
 .choosingText {
   color: white;
-  font-size: 7vw;
+  font-size: 4.5vw;
   font-family: American Typewriter, serif
 }
 
@@ -168,7 +168,7 @@ body {
 
   .choosingText
   {
-    font-size: 9vw;
+    font-size: 4.5vw;
   }
 
   .tbSpace
@@ -178,9 +178,12 @@ body {
 
 }
 
-/* @media screen and (max-width: 625px) {
-  .choosingText {
-    font-size: 8vw;
+/* @media screen and (max-width: 500px) {
+  .decideButton
+  {
+    height: 45px;
+    width: 150px;
+    font-size: 13px;
   }
 
 } */
