@@ -52,7 +52,7 @@
      height: 175px;
   }
 
-  @media screen and (max-width: 1220px) {
+  @media screen and (max-width: 1250px) {
     
     .slogan {
       font-size: 2vw;

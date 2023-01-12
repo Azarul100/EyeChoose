@@ -14,7 +14,7 @@ function Home() {
                 </div>
             </div>
             <div className='middle'>
-                <Link to="/selection"><ButtonComponent>Start</ButtonComponent></Link>
+                <Link to="selection"><ButtonComponent>Start</ButtonComponent></Link>
                 <br /><br /><br />
                 <Link to="/rules"><ButtonComponent>How To</ButtonComponent></Link>
             </div>
