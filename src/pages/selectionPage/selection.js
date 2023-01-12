@@ -68,7 +68,7 @@ function Selection() {
     return (
         <>
             <div className="topSelection">
-                <Link to="/"><img onClick = {restartID} src={logo} alt="EyeChoose" style={{ width: 275, height: 175 }} /></Link>
+                <Link to="/EyeChoose"><img onClick = {restartID} src={logo} alt="EyeChoose" style={{ width: 275, height: 175 }} /></Link>
             </div>
             <div className="selectionArea">
                 <p className="selectionText">Enter your choices one at a time below so I can choose what you should do (30 character limit)</p>
