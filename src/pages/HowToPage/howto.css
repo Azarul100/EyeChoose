@@ -22,13 +22,14 @@ body {
   justify-content: center;
   align-items: left;
   text-align: left;
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 .listText {
   color: white;
-  font-family: Comic Sans MS, Comic Sans, cursive		;
-  font-size: 1.5vw;
+  /* font-family: Comic Sans MS, Comic Sans, cursive		; */
+  font-family: Trebuchet MS, sans-serif	;
+  font-size: 1.7vw;
   margin: 5px;
   padding: 10px;
 }
@@ -47,7 +48,7 @@ body {
 @media screen and (max-width: 965px) {
 
   .listText {
-    font-size: 1.8vw;
+    font-size: 1.7vw;
   }
 
   .htTopText {
@@ -55,7 +56,7 @@ body {
   }
 
   .rulesList {
-    min-height: 55vw;
+    min-height: 45vw;
   }
 }
 
@@ -63,7 +64,7 @@ body {
 
   .listText {
     /* color: #ED2647; */
-    font-size: 2vw;
+    font-size: 2.2vw;
     margin: 0;
   }
 
@@ -72,7 +73,7 @@ body {
   }
 
   .rulesList {
-    min-height: 70vw;
+    min-height: 50vw;
   }
 }
 
@@ -88,6 +89,6 @@ body {
   }
 
   .rulesList {
-    min-height: 170vw;
+    min-height: 100vw;
   }
 }
