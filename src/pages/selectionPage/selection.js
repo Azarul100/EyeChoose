@@ -108,7 +108,7 @@ function Selection() {
                         alert("There are no choices to choose from");
                     }
                     else if (nextId === 1) {
-                        alert("There is only one choice inputted. Did you make a mistake or can you seriosuly not make a decision on one choice?")
+                        alert("i will not choose from one choice")
                     }
                     else {
                         // window.location = '/rules';
