@@ -12,9 +12,9 @@ function App() {
     <>
     <Routes>
       <Route path="EyeChoose" element={ <Home/> } />
-      <Route path="selection" element={ <Selection/> } />
-      <Route path="rules" element={ <HowTo/> } />
-      <Route path="decide" element={ <Decide/> } />
+      <Route path="/selection" element={ <Selection/> } />
+      <Route path="/rules" element={ <HowTo/> } />
+      <Route path="/decide" element={ <Decide/> } />
       <Route path ="*" element = {<PageNotFound/>}/>
     </Routes>
     </>
