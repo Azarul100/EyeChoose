@@ -43,7 +43,7 @@ const ButtonComponent = styled.button`
   {
     height: 38px;
     width: 115xpx;
-    font-size: 20px;
+    font-size: 18px;
     transition: font-size 500ms ease, height 500ms ease, width 500ms ease, border 500ms ease, box-shadow 500ms ease, border-radius 500ms ease;
 
 
@@ -51,7 +51,7 @@ const ButtonComponent = styled.button`
     {
       height: 40px;
       width: 120px;
-      font-size: 24px;
+      font-size: 22px;
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
       border-radius: 25px;
       border: 3px solid black;;
