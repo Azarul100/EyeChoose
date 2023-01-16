@@ -108,7 +108,7 @@ function Selection() {
                         alert("There are no choices to choose from");
                     }
                     else if (nextId === 1) {
-                        alert("i will not choose from one choice")
+                        alert("I will not choose from one choice")
                     }
                     else {
                         // window.location = '/rules';
