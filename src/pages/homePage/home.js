@@ -1,9 +1,25 @@
 import logo from "../../logo.png"
 import ButtonComponent from "../../components/ButtonComponent";
 import './home.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
+    let navigate = useNavigate(); 
+
+
+    function homeSelection()
+    {
+        let pathHome = "/selection/";
+        navigate(pathHome);
+
+    }
+
+    function ruleSelection()
+    {
+        let pathRule = "/rules/";
+        navigate(pathRule);
+    }
+
     return (
         <>
             <div className="Top">
@@ -14,9 +30,11 @@ function Home() {
                 </div>
             </div>
             <div className='middle'>
-                <Link to="/selection"><ButtonComponent>Start</ButtonComponent></Link>
+                {/* <Link to="/selection"><ButtonComponent>Start</ButtonComponent></Link> */}
+                <ButtonComponent onClick={homeSelection}>Start</ButtonComponent>
                 <br /><br /><br />
-                <Link to="/rules"><ButtonComponent>How To</ButtonComponent></Link>
+                {/* <Link to="/rules"><ButtonComponent>How To</ButtonComponent></Link> */}
+                <ButtonComponent onClick={ruleSelection}>How To</ButtonComponent>
             </div>
         </>
     );
